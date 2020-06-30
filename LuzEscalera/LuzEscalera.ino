@@ -11,7 +11,7 @@
 /***************************** Defines *****************************/
 //Defines generales
 #define NOMBRE_FAMILIA   "Actuador/Secuenciador (E/S)"
-#define VERSION          "4.4.1 (ESP8266v2.4.2 OTA|MQTT|Logic+|Secuenciador|eventos SNTP)"
+#define VERSION          "4.5.0 (ESP8266v2.4.2 OTA|MQTT|Logic+|Secuenciador|eventos SNTP|websockets)"
 #define SEPARADOR        '|'
 #define SUBSEPARADOR     '#'
 #define KO               -1
@@ -62,7 +62,7 @@
 /***************************** Includes *****************************/
 #include <ArduinoOTA.h>
 #include <ArduinoJson.h>
-#include <WebSocketsServer.h>
+//#include <WebSocketsServer.h>
 /***************************** Includes *****************************/
 
 /***************************** variables globales *****************************/

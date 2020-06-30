@@ -4,7 +4,7 @@
 /*  Dimaniza la interfaz Web                  */
 /*                                            */
 /**********************************************/
-
+/*
 #define PUERTO_WEBSOCKETS 81
 #define NOT_CONNECTED     -1
 
