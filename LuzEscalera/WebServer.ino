@@ -166,7 +166,19 @@ void handleRoot()
           cad += "</td>\n";    
           break;
         case MODO_SECUENCIADOR:
-          cad += "<TD colspan=2> | Secuenciador " + String(controladorSalida(i)) + "</TD>\n";
+          //cad += "<TD colspan=2> | Secuenciador " + String(controladorSalida(i)) + "</TD>\n";
+          if(estadoSecuenciador())//Si el secuenciador esta on 
+            { 
+            cad += "<TD colspan=2> | Secuenciador " + String(controladorSalida(i)) + "</TD>"; 
+            } 
+          else       
+            { 
+            //Enlace para activar o desactivar 
+            if (estadoRele(i)==1) orden="desactiva"; else orden="activa";//para 0 y 2 (apagado y en pulso) activa 
+            cad += "<TD><a href=\"" + orden + "Rele\?id=" + String(i) + "\" target=\"_self\">" + orden + " rele</a></TD>\n";   
+            //Enlace para generar un pulso 
+            cad += "<TD><a href=\"pulsoRele\?id=" + String(i) + "\" target=\"_self\">Pulso</a></TD>\n"; 
+            }           
           break;
         case MODO_SEGUIMIENTO:
           cad += "<TD>Siguiendo a la entrada " + nombreEntrada(controladorSalida(i)) + "</TD>\n"; //String(controladorSalida(i)) + "</TD>\n";

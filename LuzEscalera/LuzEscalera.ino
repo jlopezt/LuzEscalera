@@ -11,7 +11,7 @@
 /***************************** Defines *****************************/
 //Defines generales
 #define NOMBRE_FAMILIA   "Actuador/Secuenciador (E/S)"
-#define VERSION          "4.5.0 (ESP8266v2.4.2 OTA|MQTT|Logic+|Secuenciador|eventos SNTP|websockets)"
+#define VERSION          "4.5.2 (ESP8266v2.4.2 OTA|MQTT|Logic+|Secuenciador|eventos SNTP)" //Alineado con secuenciador 4.5.2
 #define SEPARADOR        '|'
 #define SUBSEPARADOR     '#'
 #define KO               -1
@@ -76,8 +76,8 @@ boolean candado=false; //Candado de configuracion. true implica que la ultima co
 /***************************** variables globales *****************************/
 /************************* FUNCIONES PARA EL BUITIN LED ***************************/
 void configuraLed(void){pinMode(LED_BUILTIN, OUTPUT);}
-void enciendeLed(void){digitalWrite(LED_BUILTIN, HIGH);}
-void apagaLed(void){digitalWrite(LED_BUILTIN, LOW);}
+void enciendeLed(void){digitalWrite(LED_BUILTIN, LOW);}
+void apagaLed(void){digitalWrite(LED_BUILTIN, HIGH);}
 void parpadeaLed(uint8_t veces, uint16_t espera=100)
   {
   for(uint8_t i=0;i<2*veces;i++)
